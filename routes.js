@@ -1,3 +1,6 @@
-const routes = require('next-routes')
+const routes = require('next-routes')()
 
-module.exports = routes()
+routes.add('Blog', '/blog')
+routes.add('/blog/:slug', '/Blog/Post')
+
+module.exports = routes
